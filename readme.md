@@ -43,7 +43,7 @@ cd ai-client
 
 ### 2. Configure OpenAI API Key
 
-OpenAI API keys are not free, but new accounts receive $5 credit that is valid for 3 months.
+OpenAI API keys are not free, but new accounts receive $5 credit that is valid for 3 months.  [caution] This is not valid for image generation.
 
 Generate an API key, and add it to the **OPENAI_API_KEY** environment variable.
 
