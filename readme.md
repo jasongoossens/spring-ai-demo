@@ -1,5 +1,3 @@
-https://docs.spring.io/spring-ai/reference/api/image/openai-image.html
-
 # OpenAI Client with Spring Boot
 
 This project is a simple Spring Boot application that demonstrates the use of [Spring AI](https://docs.spring.io/spring-ai/reference/) to interact with **OpenAI** models for:
