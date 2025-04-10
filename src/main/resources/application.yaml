@@ -1,0 +1,43 @@
+spring:
+  ai:
+    openai:
+      api-key: ${OPENAI_API_KEY}
+      chat:
+        options:
+          model: gpt-4o-mini
+          temperature: 0.4
+      image:
+        options:
+          model: dall-e-2
+          style: vivid # vivid or natural
+          n: 1
+          size: 256x256
+          quality: standard # to limit API credits used
+          response-format: url
+  profiles:
+    active: dev
+management:
+  endpoints:
+    web:
+      exposure:
+        include: info
+  info:
+    env:
+      enabled: true
+info: # http://localhost:8080/actuator/info
+  app:
+    name: Spring OpenAI Client
+    description: An application that takes, and forward JSON requests to OpenAI.
+    version: 0.0.1
+    author: Jason Goossens
+    endpoints:
+      prompt:
+        url: "api/v1/prompt"
+        type: POST
+        request:
+          prompt:
+            type: String
+            required: true
+          returnType:
+            type: ["TEXT", "IMAGE"]
+            required: true
